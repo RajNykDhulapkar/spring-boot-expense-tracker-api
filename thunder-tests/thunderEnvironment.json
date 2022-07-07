@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "59013f4e-90b2-4395-b145-8c381cdac5f9",
+    "name": "(Global Env)",
+    "default": false,
+    "global": true,
+    "sortNum": -1,
+    "created": "2022-07-07T10:49:28.645Z",
+    "modified": "2022-07-07T10:49:41.308Z",
+    "data": [
+      {
+        "name": "host",
+        "value": "http://localhost:8080"
+      }
+    ]
+  },
+  {
+    "_id": "2fffcbca-87fd-47d8-9c9d-6c8f34e1eeac",
+    "name": "auth-expense-tracker-api",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2022-07-07T10:50:11.683Z",
+    "modified": "2022-07-07T10:50:58.108Z",
+    "data": [
+      {
+        "name": "firstName",
+        "value": "Raj"
+      },
+      {
+        "name": "lastName",
+        "value": "Dhulapkar"
+      },
+      {
+        "name": "email",
+        "value": "rajdhulapkar@gmail.com"
+      },
+      {
+        "name": "password",
+        "value": "BasicsUserPassword"
+      }
+    ]
+  }
+]
