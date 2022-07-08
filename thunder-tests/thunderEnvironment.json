@@ -24,7 +24,7 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-07-07T10:50:11.683Z",
-    "modified": "2022-07-08T13:23:39.803Z",
+    "modified": "2022-07-08T14:37:29.115Z",
     "data": [
       {
         "name": "firstName",
@@ -45,6 +45,18 @@
       {
         "name": "token",
         "value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcyODY2MTksImV4cCI6MTY1NzI5MzgxOSwidXNlcklkIjoxMSwiZW1haWwiOiJyYWpkaHVsYXBrYXJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiUmFqIiwibGFzdE5hbWUiOiJEaHVsYXBrYXIifQ.E0oKJ_35-2y8WQrIak-hlfG8qemNEAah69RWrmtTHEM"
+      },
+      {
+        "name": "categoryId",
+        "value": "9"
+      },
+      {
+        "name": "categoryTitle",
+        "value": "Shopping Expense"
+      },
+      {
+        "name": "categoryDescription",
+        "value": "This is the money spent on shopping"
       }
     ]
   }
