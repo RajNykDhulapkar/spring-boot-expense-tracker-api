@@ -60,9 +60,14 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-07-08T08:49:11.587Z",
-    "modified": "2022-07-08T08:50:41.035Z",
+    "modified": "2022-07-08T13:24:57.554Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\" : \"Shopping Expense\",\n    \"description\": \"This is the money spend on shopping\"\n}",
+      "form": []
+    },
     "auth": {
       "type": "bearer",
       "bearer": "{{token}}"
