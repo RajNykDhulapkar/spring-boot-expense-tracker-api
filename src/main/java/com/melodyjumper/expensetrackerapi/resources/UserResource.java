@@ -59,7 +59,6 @@ public class UserResource {
         Map<String, String> map = new HashMap<>();
         map.put("token", token);
         return map;
-
     }
 
 }

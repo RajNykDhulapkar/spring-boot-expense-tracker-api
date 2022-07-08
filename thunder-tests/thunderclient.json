@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-07T10:49:08.978Z",
-    "modified": "2022-07-07T15:20:08.655Z",
+    "modified": "2022-07-08T08:15:58.548Z",
     "headers": [],
     "params": [],
     "body": {
@@ -16,7 +16,14 @@
       "raw": "{\n    \"firstName\": \"{{firstName}}\",\n    \"lastName\": \"{{lastName}}\",\n    \"email\" : \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
       "form": []
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token",
+        "action": "setto",
+        "value": "{{token}}"
+      }
+    ]
   },
   {
     "_id": "16739f3d-af86-42c2-9151-a7e22b487eb3",
@@ -43,5 +50,23 @@
         "value": "{{token}}"
       }
     ]
+  },
+  {
+    "_id": "333bf20f-599a-4c47-8137-0a08d57dfce5",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "67996667-5041-40d3-bb57-69dc5e340f67",
+    "name": "create category",
+    "url": "{{host}}/api/categories",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-07-08T08:49:11.587Z",
+    "modified": "2022-07-08T08:50:41.035Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": []
   }
 ]
