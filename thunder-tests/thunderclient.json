@@ -27,7 +27,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-07-07T15:29:39.194Z",
-    "modified": "2022-07-07T15:39:14.292Z",
+    "modified": "2022-07-08T08:10:38.697Z",
     "headers": [],
     "params": [],
     "body": {
@@ -35,6 +35,13 @@
       "raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
       "form": []
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.token",
+        "action": "setto",
+        "value": "{{token}}"
+      }
+    ]
   }
 ]

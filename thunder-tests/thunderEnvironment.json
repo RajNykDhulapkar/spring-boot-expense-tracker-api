@@ -6,11 +6,15 @@
     "global": true,
     "sortNum": -1,
     "created": "2022-07-07T10:49:28.645Z",
-    "modified": "2022-07-07T10:49:41.308Z",
+    "modified": "2022-07-08T08:10:45.014Z",
     "data": [
       {
         "name": "host",
         "value": "http://localhost:8080"
+      },
+      {
+        "name": "token",
+        "value": ""
       }
     ]
   },
@@ -20,7 +24,7 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-07-07T10:50:11.683Z",
-    "modified": "2022-07-07T10:50:58.108Z",
+    "modified": "2022-07-08T08:11:01.465Z",
     "data": [
       {
         "name": "firstName",
@@ -37,6 +41,10 @@
       {
         "name": "password",
         "value": "BasicsUserPassword"
+      },
+      {
+        "name": "token",
+        "value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcyNjc4NjEsImV4cCI6MTY1NzI3NTA2MSwidXNlcklkIjoxMSwiZW1haWwiOiJyYWpkaHVsYXBrYXJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiUmFqIiwibGFzdE5hbWUiOiJEaHVsYXBrYXIifQ.AJTfb623kKz2ardlLf7C9hHQSs_oyFRBfcjfPzNtEq4"
       }
     ]
   }
