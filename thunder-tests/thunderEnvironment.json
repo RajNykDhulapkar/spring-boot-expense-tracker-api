@@ -24,7 +24,7 @@
     "default": true,
     "sortNum": 10000,
     "created": "2022-07-07T10:50:11.683Z",
-    "modified": "2022-07-08T14:37:29.115Z",
+    "modified": "2022-07-23T15:16:59.040Z",
     "data": [
       {
         "name": "firstName",
@@ -44,11 +44,11 @@
       },
       {
         "name": "token",
-        "value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTcyODY2MTksImV4cCI6MTY1NzI5MzgxOSwidXNlcklkIjoxMSwiZW1haWwiOiJyYWpkaHVsYXBrYXJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiUmFqIiwibGFzdE5hbWUiOiJEaHVsYXBrYXIifQ.E0oKJ_35-2y8WQrIak-hlfG8qemNEAah69RWrmtTHEM"
+        "value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NTg1ODg0MjksImV4cCI6MTY1ODU5NTYyOSwidXNlcklkIjoxNiwiZW1haWwiOiJyYWpkaHVsYXBrYXJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjoiUmFqIiwibGFzdE5hbWUiOiJEaHVsYXBrYXIifQ.OPZ9m7f8GxFcrugZnMV3sBbb33gmBSTF-wFgbW32Xq8"
       },
       {
         "name": "categoryId",
-        "value": "9"
+        "value": "12"
       },
       {
         "name": "categoryTitle",
@@ -57,6 +57,22 @@
       {
         "name": "categoryDescription",
         "value": "This is the money spent on shopping"
+      },
+      {
+        "name": "transactionId",
+        "value": ""
+      },
+      {
+        "name": "transactionNote",
+        "value": "Money spent on festival shopping."
+      },
+      {
+        "name": "transactionDate",
+        "value": "1658589265"
+      },
+      {
+        "name": "transactionAmount",
+        "value": "1000"
       }
     ]
   }

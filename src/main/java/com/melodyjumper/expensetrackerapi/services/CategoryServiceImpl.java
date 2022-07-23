@@ -32,4 +32,16 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryRepository.findById(userId, categoryId);
     }
 
+    @Override
+    public void removeCategoryWithAllTransactions(Integer userId, Integer categoryId)
+            throws EtResourceNotFoundException {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void updateCategory(Integer userId, Integer categoryId, Category category) throws EtBadRequestException {
+        categoryRepository.update(userId, categoryId, category);
+    }
+
 }

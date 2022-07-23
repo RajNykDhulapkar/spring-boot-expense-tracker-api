@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-07T10:49:08.978Z",
-    "modified": "2022-07-08T08:15:58.548Z",
+    "modified": "2022-07-23T14:58:04.346Z",
     "headers": [],
     "params": [],
     "body": {
@@ -22,6 +22,18 @@
         "custom": "json.token",
         "action": "setto",
         "value": "{{token}}"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
       }
     ]
   },
@@ -34,7 +46,7 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2022-07-07T15:29:39.194Z",
-    "modified": "2022-07-08T08:10:38.697Z",
+    "modified": "2022-07-23T14:58:14.732Z",
     "headers": [],
     "params": [],
     "body": {
@@ -48,6 +60,12 @@
         "custom": "json.token",
         "action": "setto",
         "value": "{{token}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
       }
     ]
   },
@@ -60,7 +78,7 @@
     "method": "POST",
     "sortNum": 30000,
     "created": "2022-07-08T08:49:11.587Z",
-    "modified": "2022-07-08T13:39:30.899Z",
+    "modified": "2022-07-23T14:58:26.731Z",
     "headers": [],
     "params": [],
     "body": {
@@ -78,6 +96,12 @@
         "custom": "json.categoryId",
         "action": "setto",
         "value": "{{categoryId}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
       }
     ]
   },
@@ -90,14 +114,21 @@
     "method": "GET",
     "sortNum": 40000,
     "created": "2022-07-08T13:35:45.393Z",
-    "modified": "2022-07-08T13:40:52.755Z",
+    "modified": "2022-07-23T14:58:46.649Z",
     "headers": [],
     "params": [],
     "auth": {
       "type": "bearer",
       "bearer": "{{token}}"
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
   },
   {
     "_id": "080c633c-b044-47e6-97a7-344a0215a87c",
@@ -108,7 +139,7 @@
     "method": "GET",
     "sortNum": 50000,
     "created": "2022-07-08T13:35:55.844Z",
-    "modified": "2022-07-08T13:41:01.475Z",
+    "modified": "2022-07-23T14:59:03.399Z",
     "headers": [],
     "params": [
       {
@@ -121,7 +152,14 @@
       "type": "bearer",
       "bearer": "{{token}}"
     },
-    "tests": []
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
   },
   {
     "_id": "a2e67893-91a7-4193-a752-6b69ca5b6d41",
@@ -132,7 +170,7 @@
     "method": "DELETE",
     "sortNum": 60000,
     "created": "2022-07-08T14:44:56.584Z",
-    "modified": "2022-07-08T14:46:04.896Z",
+    "modified": "2022-07-23T14:59:21.402Z",
     "headers": [],
     "params": [
       {
@@ -141,11 +179,6 @@
         "isPath": true
       }
     ],
-    "body": {
-      "type": "json",
-      "raw": "{\n    \"title\" : \"{{categoryTitle}}\",\n    \"description\": \"{{categoryDescription}}\"\n}",
-      "form": []
-    },
     "auth": {
       "type": "bearer",
       "bearer": "{{token}}"
@@ -156,6 +189,12 @@
         "custom": "json.categoryId",
         "action": "setto",
         "value": "{{categoryId}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
       }
     ]
   },
@@ -168,7 +207,7 @@
     "method": "PUT",
     "sortNum": 55000,
     "created": "2022-07-08T14:44:58.655Z",
-    "modified": "2022-07-08T14:46:10.726Z",
+    "modified": "2022-07-23T14:59:12.666Z",
     "headers": [],
     "params": [
       {
@@ -179,7 +218,7 @@
     ],
     "body": {
       "type": "json",
-      "raw": "{\n    \"title\" : \"{{categoryTitle}}\",\n    \"description\": \"{{categoryDescription}}\"\n}",
+      "raw": "{\n    \"title\" : \"Shopping\",\n    \"description\": \"Cost of shopping\"\n}",
       "form": []
     },
     "auth": {
@@ -192,6 +231,54 @@
         "custom": "json.categoryId",
         "action": "setto",
         "value": "{{categoryId}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "5d53176f-50f3-4f82-9507-f053428e2759",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "create transaction",
+    "url": "{{host}}/api/categories/{categoryId}/transactions",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-07-23T15:04:08.122Z",
+    "modified": "2022-07-23T15:18:31.003Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "categoryId",
+        "value": "{{categoryId}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"note\" : \"{{transactionNote}}\",\n    \"amount\": \"{{transactionAmount}}\",\n    \"transactionDate\": \"{{transactionDate}}\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.transactionId",
+        "action": "setto",
+        "value": "{{transactionId}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
       }
     ]
   }
