@@ -1,6 +1,7 @@
 package com.melodyjumper.expensetrackerapi;
 
 import com.melodyjumper.expensetrackerapi.filters.AuthFilter;
+import com.melodyjumper.expensetrackerapi.filters.SimpleCORSFilter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,15 @@ public class ExpenseTrackerApiApplication {
 		AuthFilter authFilter = new AuthFilter();
 		registrationBean.setFilter(authFilter);
 		registrationBean.addUrlPatterns("/api/categories/*");
+		registrationBean.addUrlPatterns("/api/users/me");
+		return registrationBean;
+	}
+
+	@Bean(name = "filterRegistrationBean2")
+	public FilterRegistrationBean<SimpleCORSFilter> filterRegistrationBean2() {
+		FilterRegistrationBean<SimpleCORSFilter> registrationBean = new FilterRegistrationBean<>();
+		SimpleCORSFilter simpleCORSFilter = new SimpleCORSFilter();
+		registrationBean.setFilter(simpleCORSFilter);
 		return registrationBean;
 	}
 

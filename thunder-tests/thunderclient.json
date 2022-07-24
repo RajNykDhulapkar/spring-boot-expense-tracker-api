@@ -8,7 +8,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2022-07-07T10:49:08.978Z",
-    "modified": "2022-07-23T14:58:04.346Z",
+    "modified": "2022-07-24T17:30:30.271Z",
     "headers": [],
     "params": [],
     "body": {
@@ -437,6 +437,31 @@
         "isPath": true
       }
     ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "ef9c5ef5-3cb2-41cb-ad0d-3c28bfa00191",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "454ddb6a-5949-4a80-85ae-ff7e65ed191e",
+    "name": "get current logged in user",
+    "url": "{{host}}/api/users/me",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-07-24T17:30:57.495Z",
+    "modified": "2022-07-24T17:31:44.326Z",
+    "headers": [],
+    "params": [],
     "auth": {
       "type": "bearer",
       "bearer": "{{token}}"

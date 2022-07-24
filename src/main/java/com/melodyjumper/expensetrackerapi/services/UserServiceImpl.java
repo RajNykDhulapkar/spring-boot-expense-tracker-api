@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 
 import com.melodyjumper.expensetrackerapi.domain.User;
 import com.melodyjumper.expensetrackerapi.exceptions.EtAuthException;
+import com.melodyjumper.expensetrackerapi.exceptions.EtResourceNotFoundException;
 import com.melodyjumper.expensetrackerapi.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,11 @@ public class UserServiceImpl implements UserService {
         if (email != null)
             email = email.toLowerCase();
         return userRepository.findByEmailAndPassword(email, password);
+    }
+
+    @Override
+    public User fetchUserById(Integer userId) throws EtResourceNotFoundException {
+        return userRepository.findById(userId);
     }
 
 }
