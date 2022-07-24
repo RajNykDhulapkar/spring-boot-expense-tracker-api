@@ -170,7 +170,7 @@
     "method": "DELETE",
     "sortNum": 60000,
     "created": "2022-07-08T14:44:56.584Z",
-    "modified": "2022-07-23T14:59:21.402Z",
+    "modified": "2022-07-23T18:58:03.236Z",
     "headers": [],
     "params": [
       {
@@ -184,12 +184,6 @@
       "bearer": "{{token}}"
     },
     "tests": [
-      {
-        "type": "set-env-var",
-        "custom": "json.categoryId",
-        "action": "setto",
-        "value": "{{categoryId}}"
-      },
       {
         "type": "res-code",
         "custom": "",
@@ -207,7 +201,7 @@
     "method": "PUT",
     "sortNum": 55000,
     "created": "2022-07-08T14:44:58.655Z",
-    "modified": "2022-07-23T14:59:12.666Z",
+    "modified": "2022-07-23T19:02:19.174Z",
     "headers": [],
     "params": [
       {
@@ -226,12 +220,6 @@
       "bearer": "{{token}}"
     },
     "tests": [
-      {
-        "type": "set-env-var",
-        "custom": "json.categoryId",
-        "action": "setto",
-        "value": "{{categoryId}}"
-      },
       {
         "type": "res-code",
         "custom": "",
@@ -279,6 +267,186 @@
         "custom": "",
         "action": "equal",
         "value": "201"
+      }
+    ]
+  },
+  {
+    "_id": "493aede6-ca88-4c46-a4b0-e0cc1873979d",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "create category for transaction",
+    "url": "{{host}}/api/categories",
+    "method": "POST",
+    "sortNum": 5000,
+    "created": "2022-07-23T18:59:31.118Z",
+    "modified": "2022-07-23T18:59:52.389Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"title\" : \"{{categoryTitle}}\",\n    \"description\": \"{{categoryDescription}}\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.categoryId",
+        "action": "setto",
+        "value": "{{categoryId}}"
+      },
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "201"
+      }
+    ]
+  },
+  {
+    "_id": "78e45d8c-c344-49c8-8c21-42b6451e53ff",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "get all  transactions of the given cat",
+    "url": "{{host}}/api/categories/{categoryId}/transactions",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-07-24T10:44:46.847Z",
+    "modified": "2022-07-24T10:45:31.129Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "categoryId",
+        "value": "{{categoryId}}",
+        "isPath": true
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "c8b31f5a-f80f-4d50-9fed-fceaa1ed625f",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "get transaction with given id of the given cat",
+    "url": "{{host}}/api/categories/{categoryId}/transactions/{transactionId}",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2022-07-24T10:45:42.776Z",
+    "modified": "2022-07-24T10:46:41.680Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "categoryId",
+        "value": "{{categoryId}}",
+        "isPath": true
+      },
+      {
+        "name": "transactionId",
+        "value": "{{transactionId}}",
+        "isPath": true
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "41db40f4-cbd5-4694-9e22-39446f765ac8",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "update transaction with given id of the given cat Copy Copy",
+    "url": "{{host}}/api/categories/{categoryId}/transactions/{transactionId}",
+    "method": "PUT",
+    "sortNum": 40000,
+    "created": "2022-07-24T10:47:11.790Z",
+    "modified": "2022-07-24T10:50:59.625Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "categoryId",
+        "value": "{{categoryId}}",
+        "isPath": true
+      },
+      {
+        "name": "transactionId",
+        "value": "{{transactionId}}",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"note\" : \"sunday shopping spree\",\n    \"amount\": \"400\",\n    \"transactionDate\": \"1658589065\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      }
+    ]
+  },
+  {
+    "_id": "6898c57d-75aa-40f7-9cc7-8a8b58126524",
+    "colId": "456b2719-b9d5-445d-b270-045e4e8a5e1a",
+    "containerId": "e990f2f5-7028-4106-a201-f3e176313c90",
+    "name": "delete transaction with given id of the given cat Copy Copy Copy",
+    "url": "{{host}}/api/categories/{categoryId}/transactions/{transactionId}",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-07-24T10:48:02.519Z",
+    "modified": "2022-07-24T10:48:29.137Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "categoryId",
+        "value": "{{categoryId}}",
+        "isPath": true
+      },
+      {
+        "name": "transactionId",
+        "value": "{{transactionId}}",
+        "isPath": true
+      }
+    ],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{token}}"
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
       }
     ]
   }
